@@ -1,0 +1,95 @@
+.Partners-section {
+  padding: 10px 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.Partners-wrapper {
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Heading */
+.Partners-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.pink-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #e91e63;
+  margin: 8px auto 0 auto;
+}
+
+/* Client Card */
+.Partners-card {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.Partners-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.Partners-name {
+  font-size: 13px;
+  margin-top: 8px;
+  color: #444;
+}
+
+/* 🔥 Tighter space between images */
+.slick-slide > div {
+  margin: 0 2px;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+/* View More Button */
+.Partners-more {
+  text-align: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.clients-more span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow-icon {
+  font-size: 14px;
+}
+/* ========== MOBILE (< 600px) QUICK FIX ========== */
+@media (max-width: 600px) {
+  .Partners-wrapper {
+    width: 100%;
+    padding: 0 8px;            /* side gap */
+  }
+
+  /* right-side View More */
+  .Partners-more {
+    text-align: right;
+    margin-top: 14px;
+    padding-right: 8px;
+    font-size: 13px;
+  }
+}

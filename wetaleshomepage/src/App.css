@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem; /* reduced padding for smaller screens */
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden; /* 🔒 ensure no horizontal scroll */
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0.5rem;
+  }
+}

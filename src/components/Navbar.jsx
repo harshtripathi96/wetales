@@ -20,7 +20,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -30,6 +30,8 @@ const Navbar = () => {
 
   const [anchorElBrowse, setAnchorElBrowse] = useState(null);
   const [anchorElServices, setAnchorElServices] = useState(null);
+
+  const navigate = useNavigate();
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
@@ -127,28 +129,14 @@ const Navbar = () => {
                 </Menu>
               </Box>
 
-              {/* Services */}
+              {/* Services (Button to navigate) */}
               <Box>
                 <Button
                   color="inherit"
-                  endIcon={<ExpandMoreIcon />}
-                  onClick={(e) => setAnchorElServices(e.currentTarget)}
+                  onClick={() => navigate("/services")}
                 >
-                  SERVICES
+                  TECH SERVICES
                 </Button>
-                <Menu
-                  anchorEl={anchorElServices}
-                  open={Boolean(anchorElServices)}
-                  onClose={() => setAnchorElServices(null)}
-                >
-                  <MenuItem
-                    component="a"
-                    href="/services"
-                    onClick={() => setAnchorElServices(null)}
-                  >
-                    Tech Services
-                  </MenuItem>
-                </Menu>
               </Box>
 
               <Button color="inherit" onClick={handleScrollToWhyUs}>
@@ -232,12 +220,13 @@ const Navbar = () => {
 
             <Divider />
 
-            {/* Services */}
+            {/* Services (navigate on click) */}
             <ListItem
               button
-              component="a"
-              href="/services"
-              onClick={toggleDrawer}
+              onClick={() => {
+                toggleDrawer();
+                navigate("/services");
+              }}
             >
               <ListItemText primary="Tech Services" />
             </ListItem>

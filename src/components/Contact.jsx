@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   const sendWhatsApp = () => {
-    const phoneNumber = "919602753982";
+    const phoneNumber = "918999 10 8999";
     if (!form.name || !form.phone || !form.message) {
       alert("Please fill in Name, Phone, and Message fields.");
       return;

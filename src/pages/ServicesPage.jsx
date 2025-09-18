@@ -189,7 +189,7 @@ export default function ServicesPage() {
           PaperProps={{
             sx: {
               borderRadius: "12px",
-              height: "90vh",
+              height: "80vh",
               display: "flex",
               flexDirection: "column",
             },
@@ -203,8 +203,8 @@ export default function ServicesPage() {
               top: 8,
               right: 8,
               zIndex: 2,
-              backgroundColor: "rgba(255,255,255,0.8)",
-              "&:hover": { backgroundColor: "rgba(255,255,255,1)" },
+              backgroundColor: "rgba(214, 103, 234, 1)",
+              "&:hover": { backgroundColor: "rgba(185, 68, 126, 1)" },
             }}
           >
             <CloseIcon />
@@ -224,7 +224,7 @@ export default function ServicesPage() {
               sx={{
                 flex: { xs: "0 0 auto", md: 1 },
                 height: { xs: "60vh", md: "100%" },
-                backgroundColor: "#000",
+                backgroundColor: "#f0d8fcff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -236,10 +236,10 @@ export default function ServicesPage() {
                   controls
                   autoPlay
                   style={{
-                    width: "100%",
+                    width: "90%",
                     height: "100%",
-                    objectFit: "cover",
-                    backgroundColor: "#000",
+                    objectFit: "contai",
+                    backgroundColor: "#f0d8fcff",
                   }}
                 />
               )}

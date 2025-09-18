@@ -30,19 +30,24 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendWhatsApp = () => {
-    const phoneNumber = "918999 10 8999";
-    if (!form.name || !form.phone || !form.message) {
-      alert("Please fill in Name, Phone, and Message fields.");
-      return;
-    }
-    const message = `Hello Wetales Team,\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nMessage: ${form.message}`;
-    const encodedMessage = encodeURIComponent(message);
-    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(url, "_blank");
-  };
+const sendWhatsApp = () => {
+  if (!form.name || !form.phone || !form.message) {
+    alert("Please fill in Name, Phone, and Message fields.");
+    return;
+  }
 
-  const sendEmail = () => {
+  const message = `Hello Wetales Team,\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nMessage: ${form.message}`;
+  const encodedMessage = encodeURIComponent(message);
+
+  // ✅ Correct format — no spaces or special characters
+  const phoneNumber = "918999108999";
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  console.log("Redirecting to:", url); // Debugging
+  window.open(url, "_blank");
+};
+    const sendEmail = () => {
     if (!form.name || !form.phone || !form.message) {
       alert("Please fill in Name, Phone, and Message fields.");
       return;
@@ -247,7 +252,7 @@ const Contact = () => {
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               EMAIL:
             </Typography>
-            <Typography mb={1}>connect@wetales.in</Typography>
+            <Typography mb={1}>wtales.am@gmail.com</Typography>
 
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               SOCIAL TOUCH:

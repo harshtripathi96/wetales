@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "./Blog.css";
 
-import blog1 from "../assets/blog1.jpg";
-import blog2 from "../assets/blog2.jpg";
-import blog3 from "../assets/blog3.jpg";
-import blog4 from "../assets/blog4.jpg";
+import blog1 from "../assets/blog/blog1.jpg";
+import blog2 from "../assets/blog/blog2.jpg";
+import blog3 from "../assets/blog/blog3.jpg";
+import blog4 from "../assets/blog/blog4.jpg";
 import { FaArrowRight } from "react-icons/fa";
 
 const blogData = [

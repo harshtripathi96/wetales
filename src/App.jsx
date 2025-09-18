@@ -16,6 +16,7 @@ import OnlyimgSection from './components/OnlyimgSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ServicesPage from './pages/ServicesPage';
+import Blog from './components/Blog';
 
 const Home = () => (
   <>
@@ -31,6 +32,7 @@ const Home = () => (
     <Testimonial />
     <Clients />
     <OnlyimgSection />
+    <Blog/>
     <Contact />
     <Footer />
   </>

@@ -3,7 +3,7 @@ import { Box, Typography, Card, CardActionArea, CardMedia } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 
 import service1 from '../assets/services/function.jpg';
-import service2 from '../assets/services/rsvpv.png';
+import service2 from '../assets/services/rsvp.jpg';
 import service3 from '../assets/services/wedding.jpg';
 import service4 from '../assets/services/personalised.jpg';
 import service5 from '../assets/services/customised.jpg';

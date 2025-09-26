@@ -252,7 +252,7 @@ const sendWhatsApp = () => {
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               EMAIL:
             </Typography>
-            <Typography mb={1}>wtales.am@gmail.com</Typography>
+            <Typography mb={1}>support@wetales.com , wtales.am@gmail.com</Typography>
 
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               SOCIAL TOUCH:

@@ -17,6 +17,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ServicesPage from './pages/ServicesPage';
 import Blog from './components/Blog';
+import CustomizedInvite from "./pages/CustomizedInvite";
 
 const Home = () => (
   <>
@@ -43,6 +44,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<ServicesPage />} />
+       <Route path="/customized-invite" element={<CustomizedInvite />} />
     </Routes>
   );
 };

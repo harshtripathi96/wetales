@@ -42,7 +42,7 @@ const Social = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            gap: 3,
+            gap: 4.7,
           }}
         >
           {socialData.map((item, index) => (

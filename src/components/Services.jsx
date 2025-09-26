@@ -3,10 +3,10 @@ import { Box, Typography, Card, CardActionArea, CardMedia } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 
 import service1 from '../assets/services/function.jpg';
-import service2 from '../assets/services/rsvp.jpg';
-import service3 from '../assets/services/weding.jpg';
-import service4 from '../assets/services/personal.jpg';
-import service5 from '../assets/services/pdf.jpg';
+import service2 from '../assets/services/rsvpv.png';
+import service3 from '../assets/services/wedding.jpg';
+import service4 from '../assets/services/personalised.jpg';
+import service5 from '../assets/services/customised.jpg';
 
 const services = [
   { image: service1, bgColor: '#f9e8e8', videoId: 1 },
@@ -51,8 +51,8 @@ const Services = () => {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', sm: 'row' },
-          gap: 2,
-          maxWidth: 840,
+          gap: 3,
+          maxWidth: 1040,
           mx: 'auto',
         }}
       >
@@ -71,7 +71,7 @@ const Services = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, flex: 1 }}>
           <ImageCard
             service={services[3]}
-            height={{ xs: 400, sm: 416 }}
+            height={{ xs: 500, sm: 536 }}
             onClick={() => handleClick(services[3].videoId)}
           />
           <ImageCard
@@ -84,7 +84,7 @@ const Services = () => {
   );
 };
 
-const ImageCard = ({ service, height = 200, onClick }) => (
+const ImageCard = ({ service, height = 260, onClick }) => (
   <Card
     sx={{
       backgroundColor: service.bgColor,
@@ -105,7 +105,7 @@ const ImageCard = ({ service, height = 200, onClick }) => (
         component="img"
         image={service.image}
         alt="Service"
-        sx={{ height: '100%', width: '100%', objectFit: 'contain' }}
+        sx={{ height: '100%', width: '100%', objectFit: 'cover' }}
       />
     </CardActionArea>
   </Card>

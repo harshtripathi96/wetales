@@ -29,7 +29,6 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [anchorElBrowse, setAnchorElBrowse] = useState(null);
-  const [anchorElServices, setAnchorElServices] = useState(null);
 
   const navigate = useNavigate();
 
@@ -92,57 +91,68 @@ const Navbar = () => {
                 >
                   <MenuItem
                     component="a"
-                    href="https://wetales.in/template?subsubcat=royaltraditional-8%2Croyaltraditional-18"
+                    href="https://wetales.in/template?cat=wedding-4"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setAnchorElBrowse(null)}
                   >
-                    Royal/Traditional
+                    Wedding Invitation
                   </MenuItem>
                   <MenuItem
                     component="a"
-                    href="https://wetales.in/template?subsubcat=property-9%2Cproperty-19"
+                    href="https://wetales.in/template?cat=anniversary-5"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setAnchorElBrowse(null)}
                   >
-                    Property
+                    Anniversary Invitation
                   </MenuItem>
                   <MenuItem
                     component="a"
-                    href="https://wetales.in/template?subsubcat=story-based-15"
+                    href="https://wetales.in/template?cat=engagement-6"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setAnchorElBrowse(null)}
                   >
-                    Story based
+                    Engagement Invitation
                   </MenuItem>
                   <MenuItem
                     component="a"
-                    href="https://wetales.in/template?subsubcat=3d-animated-123%2C3d-animated-124"
+                    href="https://wetales.in/template?subcat=birthday-18%2Cadult-birthday-40"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setAnchorElBrowse(null)}
                   >
-                    3D Animated
+                    Birthday Invitation
+                  </MenuItem>
+                  <MenuItem
+                    component="a"
+                    href="https://wetales.in/template?cat=social-events-7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setAnchorElBrowse(null)}
+                  >
+                    Religious Invitation
                   </MenuItem>
                 </Menu>
               </Box>
 
-              {/* Services (Button to navigate) */}
-              <Box>
-                <Button
-                  color="inherit"
-                  onClick={() => navigate("/services")}
-                >
-                  TECH SERVICES
-                </Button>
-              </Box>
+              {/* Tech Services */}
+              <Button color="inherit" onClick={() => navigate("/services")}>
+                TECH SERVICES
+              </Button>
 
+              {/* Customized Invite */}
+              <Button color="inherit" onClick={() => navigate("/customized-invite")}>
+                CUSTOMIZED INVITE
+              </Button>
+
+              {/* About Us */}
               <Button color="inherit" onClick={handleScrollToWhyUs}>
                 ABOUT US
               </Button>
 
+              {/* Get a Quote */}
               <Button
                 variant="contained"
                 onClick={handleScrollToQuote}
@@ -220,7 +230,7 @@ const Navbar = () => {
 
             <Divider />
 
-            {/* Services (navigate on click) */}
+            {/* Tech Services */}
             <ListItem
               button
               onClick={() => {
@@ -229,6 +239,17 @@ const Navbar = () => {
               }}
             >
               <ListItemText primary="Tech Services" />
+            </ListItem>
+
+            {/* Customized Invite */}
+            <ListItem
+              button
+              onClick={() => {
+                toggleDrawer();
+                navigate("/customized-invite");
+              }}
+            >
+              <ListItemText primary="Customized Invite" />
             </ListItem>
 
             <Divider />
@@ -270,4 +291,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;     
+export default Navbar;

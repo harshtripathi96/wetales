@@ -42,7 +42,7 @@ const About = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            gap: 3,
+            gap: 4.7,
             
           }}
         >
